@@ -1,0 +1,1 @@
+# Microsoft-Rewards-Auto-Searcher
