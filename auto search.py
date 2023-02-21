@@ -13,7 +13,10 @@ n=1
 word=""
 while n<61:
     pyautogui.moveTo(random.randrange(300,450),random.randrange(125,130))
-    pyautogui.press("backspace",presses=len(word))
+    pyautogui.click()
+    with pyautogui.hold('ctrl'):
+        pyautogui.press('a')
+    pyautogui.press('backspace')
     pyautogui.click()
     word=random_word()
     pyautogui.write(word,interval=(random.randrange(1,3)/10))
