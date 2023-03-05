@@ -8,7 +8,7 @@ import random
 from time import sleep
 alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 def random_word():
-    word_length=random.randrange(1,20)
+    word_length=random.randrange(1,5)
     word=""
     for i in range(0,word_length):
         random_alphabet_index=random.randrange(0,25)
@@ -16,7 +16,7 @@ def random_word():
     return word
 n=1
 word=""
-while n<61:
+while n<40:
     pyautogui.moveTo(random.randrange(300,450),random.randrange(125,130))
     pyautogui.click()
     with pyautogui.hold('ctrl'):
@@ -24,7 +24,7 @@ while n<61:
     pyautogui.press('backspace')
     pyautogui.click()
     word=random_word()
-    pyautogui.write(word,interval=(random.randrange(1,3)/10))
+    pyautogui.write(word,interval=(random.randrange(1,2)/10))
     pyautogui.press("enter")
-    sleep(random.randrange(1,5))
+    sleep(random.randrange(1,3))
     n+=1
